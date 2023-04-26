@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 
 
-export default function SearchBar( {handleSearchClick, city, setCity}) {
-  
+export default function SearchBar( {handleSearchClick}) {
+  const [city, setCity] = useState("");
 
   return (
     <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>

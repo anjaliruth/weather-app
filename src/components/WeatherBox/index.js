@@ -4,9 +4,10 @@ export default function WeatherBox({dayxData}) {
     // Get the name of the day using the toLocaleDateString method
     let day = date.toLocaleDateString('default', {weekday: 'long'});
     return (
-        <div>
+        <div className = "forecast">
             <h1>{dayxData && day}</h1>
             <h1>{dayxData && `${dayxData.temp}ºC`}</h1>
+            <h1>{dayxData && dayxData.weather.description}</h1>
         </div>
     )
 }

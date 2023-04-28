@@ -50,7 +50,7 @@ export default function MainWeatherWindow() {
   console.log(todayData);
 
   return (
-    <div style={{ textAlign: "center", margin: "0 auto", maxWidth: "300px" }}>
+    <div>
       <SearchBar handleSearchClick={handleSearchClick} />
       <h1>{todayData && location}</h1>
       <h1>{todayData && day}</h1>

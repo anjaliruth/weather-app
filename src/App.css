@@ -1,7 +1,26 @@
+.today {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0px auto;
+  width: 600px;
+  height: 150px;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.today h1{
+  margin: 0.2em 0;
+}
+
+
 body {
   font-family: Lobster;
   font-size: 10px;
-  
+  background-image: url("./Photos/SunnySkiesv3.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .forecast {
@@ -11,8 +30,8 @@ body {
   align-items: center;
   justify-content: center;
   margin: 0 auto;
-  width: 150px;
-  height: 150px;
+  width: 100px;
+  height: 100px;
   padding: 20px;
   background-color: #fff;
   border-radius: 10px;
@@ -28,11 +47,9 @@ body {
   flex-direction: row;
   align-items: center;
   justify-content: center;
+  width : 450px;
   margin: 0 auto;
-  width: 600px;
-  background-color: #fff;
   border-radius: 10px;
-  /* box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1); */
 }
 
 .search {

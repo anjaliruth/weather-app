@@ -57,10 +57,12 @@ export default function MainWeatherWindow() {
   return (
     <div>
       <SearchBar handleSearchClick={handleSearchClick} />
+      <div className = "today">
       <h1>{todayData && location}</h1>
       <h1>{todayData && day}</h1>
       <h1>{todayData && `${todayData.temp}ºC`}</h1>
       <h1>{todayData && todayData.weather.description}</h1>
+      </div>
       <div className = "forecastTogether">
         <WeatherBox dayxData={day1Data} />
         <WeatherBox dayxData={day2Data} />

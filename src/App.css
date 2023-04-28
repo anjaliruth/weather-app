@@ -1,15 +1,26 @@
+body {
+  font-family: Lobster;
+  font-size: 10px;
+  
+}
+
 .forecast {
   display: flex;
   flex-direction: column;
+  text-align: center;
   align-items: center;
   justify-content: center;
   margin: 0 auto;
-  width: 900px;
-  height: 250px;
+  width: 150px;
+  height: 150px;
   padding: 20px;
   background-color: #fff;
   border-radius: 10px;
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+}
+
+.forecast h1{
+  margin: 0.2em 0;
 }
 
 .forecastTogether{
@@ -18,9 +29,29 @@
   align-items: center;
   justify-content: center;
   margin: 0 auto;
-  width: 700px;
-  gap: 20px;
+  width: 600px;
   background-color: #fff;
   border-radius: 10px;
+  /* box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1); */
+}
 
+.search {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  height : 100px;
+  border-radius: 10px;
+}
+
+input {
+  border-radius: 10px 0 0 10px;
+  border: 1px solid #ccc;
+  padding: 10px;
+}
+button {
+  border-radius: 0 10px 10px 0;
+  border: 1px solid #ccc;
+  padding: 10px;
 }

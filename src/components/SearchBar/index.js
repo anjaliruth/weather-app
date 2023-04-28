@@ -5,7 +5,7 @@ export default function SearchBar( {handleSearchClick}) {
   const [city, setCity] = useState("");
 
   return (
-    <div >
+    <div className = "search" >
       <input
         placeholder="Search City"
         onChange={(event) => setCity(event.target.value)}

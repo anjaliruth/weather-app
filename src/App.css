@@ -1,3 +1,11 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400&display=swap');
+
+ * {
+  font-family: 'Roboto Slab', serif;
+  color: white
+  }
+
 .display {
   display: flex;
   flex-direction: column;
@@ -6,45 +14,63 @@
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
   width: 900px;
   height: 600px;
-  margin: 0 auto;
-  background-color: aqua;
+  margin: 30px auto;
+  border-radius: 10px;
+  
   }
   .today {
+    font-size: larger;
     display: flex;
     flex-direction: row-reverse;
     align-items: center;
     justify-content: flex-start;
-   margin-left: 100px;
-    width: 300px;
+   /* margin-left: 100px; */
+    width: 600px;
     height: 150px;
     gap: 0;
     padding: 20px;
     border-radius: 10px;
-    background-color: blue;
+    /* background-color: blue; */
   }
   
   .todayData {
     flex: 1;
     text-align: start;
     padding:0;
-    margin: 5px 5px 5px 0;
-    background-color: white;
-    white-space: none;
+    margin: 5px 5px 5px 20px;
+    width: 250px;
+    /* background-color: yellow; */
   
   }
   
   .weatherEmoji {
-    flex: 0 0 auto;
-    text-align: center;
-    padding:0;
-    margin:0;
-    background-color: black;
+    /* flex: 0 0 auto; */
+display: flex;
+align-items: flex-end;
+    text-align:center;
+    padding-top:150px;
+    margin-top:10px;
+    font-size:75px;
+    width: 200px;
+    height: 200px;
+    /* background-color: red; */
   }
+
+  
 
   .emoji {
     font-size: 5em;
     margin: 0;
     padding: 0;
+  }
+
+  .emoji2 {
+    font-size: 10px;
+    margin: 0;
+    padding: 0;
+    width: 100px;
+    height: 100px;
+    background-color: brown;
   }
   
 /* 
@@ -100,7 +126,7 @@
 body {
   font-family: Lobster;
   font-size: 10px;
-  background-image: url("./Photos/SunnySkiesv3.jpg");
+  background-image: url("./Photos/SunnySkiesv4.jpg");
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -111,11 +137,11 @@ body {
   text-align: center;
   align-items: center;
   justify-content: center;
-  margin: 0 auto;
-  width: 100px;
-  height: 100px;
-  padding: 20px;
-  background-color: #fff;
+  margin: 15px auto;
+  width: 160px;
+  height: 160px;
+  padding: 30px 20px;
+  background-color: rgba(0, 0, 0, 0.5);
   border-radius: 10px;
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
 }
@@ -129,8 +155,8 @@ body {
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  width : 450px;
-  margin: 0 auto;
+  width : 650px;
+  margin: 20px auto;
   border-radius: 10px;
 }
 
@@ -142,6 +168,11 @@ body {
   margin: 0 auto;
   height : 100px;
   border-radius: 10px;
+  color: black;
+}
+
+.search > input,.search > button  {
+ color: black
 }
 
 input {

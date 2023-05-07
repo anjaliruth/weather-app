@@ -8,6 +8,7 @@ export default function WeatherBox({dayxData, getEmoji}) {
             <h1>{dayxData && day}</h1>
             <h1>{dayxData && `${dayxData.temp.toFixed(0)}ºC`}</h1>
             <h1 className = "emoji">{dayxData && getEmoji(dayxData.weather.description)} </h1>
+            <h1>{dayxData && dayxData.weather.description}</h1>
 
         </div>
     )

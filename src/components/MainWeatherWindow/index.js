@@ -146,11 +146,15 @@ export default function MainWeatherWindow() {
           <h1>{todayData && day}</h1>
 
           <h1>{todayData && `${todayData.temp.toFixed(0)}ºC`}</h1>
+          <h1>{todayData && todayData.weather.description}</h1>
+          
         </div>
         <div className="weatherEmoji">
-          <h1 className = "emoji">
+          <h1 className="emoji1">
             {todayData && getWeatherEmoji(todayData.weather.description)}
           </h1>
+          
+        
         </div>
       </div>
       <div className="forecastTogether">

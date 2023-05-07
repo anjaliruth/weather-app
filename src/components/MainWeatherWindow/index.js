@@ -1,6 +1,6 @@
 import SearchBar from "../SearchBar";
 import WeatherBox from "../WeatherBox";
-import { useState,useEffect } from "react";
+import { useState, useEffect } from "react";
 export default function MainWeatherWindow() {
   //create a state variable for the city that users will input
   //Lifted state from the SearchBar component because the city is needed in the WeatherBox component
@@ -15,7 +15,7 @@ export default function MainWeatherWindow() {
   //separate state just for the city because the city is at the top of the API response, and not inthe nested Data onject
   const [location, setLocation] = useState("London");
   //do the API call here
-  //call the aPI
+  //call the API
   //API is called in the useEffect hook
   //city is a dependency of the useEffect hook
   //the useEffect hook will be called when the city changes
@@ -54,19 +54,109 @@ export default function MainWeatherWindow() {
   //the city will be a state variable (useState hook)
   console.log(todayData);
 
+  function getWeatherEmoji(description) {
+    switch (description) {
+      case "Clear sky":
+        return "☀️";
+      case "Few clouds":
+        return "🌤️";
+      case "Scattered clouds":
+        return "🌥️";
+      case "Broken clouds":
+        return "🌥️";
+      case "Overcast clouds":
+        return "☁️";
+      case "Light rain":
+        return "🌧️";
+      case "Moderate rain":
+        return "🌧️";
+      case "Heavy rain":
+        return "⛈️";
+      case "Freezing rain":
+        return "❄️🌧️";
+      case "Light shower rain":
+        return "🌧️";
+      case "Shower rain":
+        return "🌧️";
+      case "Heavy shower rain":
+        return "⛈️";
+      case "Light snow":
+        return "❄️";
+      case "Snow":
+        return "❄️";
+      case "Heavy snow":
+        return "❄️🌨️";
+      case "Sleet":
+        return "❄️🌧️";
+      case "Light shower sleet":
+        return "❄️🌧️";
+      case "Shower sleet":
+        return "❄️🌧️";
+      case "Light rain and snow":
+        return "❄️🌧️";
+      case "Rain and snow":
+        return "❄️🌧️";
+      case "Light shower snow":
+        return "❄️🌨️";
+      case "Shower snow":
+        return "❄️🌨️";
+      case "Heavy shower snow":
+        return "❄️🌨️";
+      case "Mist":
+        return "🌫️";
+      case "Smoke":
+        return "🌫️";
+      case "Haze":
+        return "🌫️";
+      case "Sand/dust":
+        return "🌫️";
+      case "Fog":
+        return "🌫️";
+      case "Freezing fog":
+        return "❄️🌫️";
+      case "Patches of fog":
+        return "🌫️";
+      case "Patches of smoke":
+        return "🌫️";
+      case "Patches of haze":
+        return "🌫️";
+      case "Patches of sand/dust":
+        return "🌫️";
+      case "Drizzle":
+        return "🌧️";
+      case "Freezing drizzle":
+        return "❄️🌧️";
+      case "Light intensity drizzle":
+        return "🌧️";
+      case "Shower drizzle":
+        return "🌧️";
+      case "Heavy intensity drizzle":
+        return "🌧️";
+      default:
+        return "❓";
+    }
+  }
+
   return (
-    <div>
+    <div className="display">
       <SearchBar handleSearchClick={handleSearchClick} />
-      <div className = "today">
-      <h1>{todayData && location}</h1>
-      <h1>{todayData && day}</h1>
-      <h1>{todayData && `${todayData.temp}ºC`}</h1>
-      <h1>{todayData && todayData.weather.description}</h1>
+      <div className="today">
+        <div className="todayData">
+          <h1>{todayData && location}</h1>
+          <h1>{todayData && day}</h1>
+
+          <h1>{todayData && `${todayData.temp.toFixed(0)}ºC`}</h1>
+        </div>
+        <div className="weatherEmoji">
+          <h1 className = "emoji">
+            {todayData && getWeatherEmoji(todayData.weather.description)}
+          </h1>
+        </div>
       </div>
-      <div className = "forecastTogether">
-        <WeatherBox dayxData={day1Data} />
-        <WeatherBox dayxData={day2Data} />
-        <WeatherBox dayxData={day3Data} />
+      <div className="forecastTogether">
+        <WeatherBox dayxData={day1Data} getEmoji={getWeatherEmoji} />
+        <WeatherBox dayxData={day2Data} getEmoji={getWeatherEmoji} />
+        <WeatherBox dayxData={day3Data} getEmoji={getWeatherEmoji} />
       </div>
     </div>
   );

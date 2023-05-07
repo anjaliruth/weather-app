@@ -1,17 +1,99 @@
-.today {
+.display {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  margin: 0px auto;
-  width: 600px;
-  height: 150px;
-  padding: 20px;
-  border-radius: 10px;
-}
+  justify-content: flex-start;
+  align-content:flex-start;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+  width: 900px;
+  height: 600px;
+  margin: 0 auto;
+  background-color: aqua;
+  }
+  .today {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: flex-start;
+   margin-left: 100px;
+    width: 300px;
+    height: 150px;
+    gap: 0;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: blue;
+  }
+  
+  .todayData {
+    flex: 1;
+    text-align: start;
+    padding:0;
+    margin: 5px 5px 5px 0;
+    background-color: white;
+    white-space: none;
+  
+  }
+  
+  .weatherEmoji {
+    flex: 0 0 auto;
+    text-align: center;
+    padding:0;
+    margin:0;
+    background-color: black;
+  }
+
+  .emoji {
+    font-size: 5em;
+    margin: 0;
+    padding: 0;
+  }
+  
+/* 
+  .weatherEmoji {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-align: center;
+    justify-content: flex-start;
+    margin: 0px auto;
+    width: 300px;
+    height: 150px;
+  padding: 0;
+    border-radius: 10px;
+  }
+  .todayData {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: flex-start;
+    margin: 0px auto;
+    width: 300px;
+    height: 150px;
+    padding: 0;
+    border-radius: 10px;
+  }
+
+  .today {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    text-align: center;
+    justify-content: flex-start;
+    margin: 0px auto;
+    width: 300px;
+    height: 150px;
+    gap: 0;
+    padding: 20px;
+    border-radius: 10px;
+  } */
+
+
+
 
 .today h1{
   margin: 0.2em 0;
+  font-size: 2.5em;
+  font-weight: 1000px;
 }
 
 

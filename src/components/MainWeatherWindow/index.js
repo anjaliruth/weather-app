@@ -25,7 +25,7 @@ export default function MainWeatherWindow() {
   useEffect(() => {
     async function getWeather() {
       const response = await fetch(
-        `https://api.weatherbit.io/v2.0/forecast/daily?&city=${location}&key=44cbebc5694040768e4b8c4982357e37`
+        `https://api.weatherbit.io/v2.0/forecast/daily?&city=${location}&key=${process.env.API_KEY}`
       );
       const data = await response.json();
       setLocation(data.city_name);

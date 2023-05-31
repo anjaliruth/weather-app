@@ -1,6 +1,9 @@
 import SearchBar from "../SearchBar";
 import WeatherBox from "../WeatherBox";
 import { useState, useEffect } from "react";
+
+const REACT_APP_API_KEY = process.env.REACT_APP_API_KEY
+
 export default function MainWeatherWindow() {
   //create a state variable for the city that users will input
   //Lifted state from the SearchBar component because the city is needed in the WeatherBox component
@@ -25,7 +28,7 @@ export default function MainWeatherWindow() {
   useEffect(() => {
     async function getWeather() {
       const response = await fetch(
-        `https://api.weatherbit.io/v2.0/forecast/daily?&city=${location}&key=${process.env.API_KEY}`
+        `https://api.weatherbit.io/v2.0/forecast/daily?&city=${location}&key=${REACT_APP_API_KEY}`
       );
       
       const data = await response.json();
@@ -139,6 +142,8 @@ export default function MainWeatherWindow() {
   }
 
   return (
+
+  
     <div className="display">
       <SearchBar handleSearchClick={handleSearchClick} />
       <div className="today">
